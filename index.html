@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TMB</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo_personalizado.css">
+</head>
+<body>
+	<div class="container">
+        
+        <header>
+                <div class="row">
+                
+                    <div class="col-sm-6 logo ">
+                         
+                    </div>
+                </div>    
+
+            <div class="row d-flex justify-content-center">
+                 <h3>Taxa de Metabolismo Basal</h3>           
+            </div>
+            
+        </header>            
+        <hr/>
+	    <section>
+            <form method="POST" action="php/result.php">
+                <div class="row d-flex justify-content-center">   
+					 <div class="form-group">                             
+                        <h4>Selecione seu sexo</h4> <br/>
+                        <div class="col-3">
+                            <label for="masc"> Masculino </label> <input type="radio" id="masc" name="sexo" value="masc" checked> 
+                            <br/>                                     
+                            <label for="fem"> Femenino </label> <input type="radio" id="fem"  name="sexo" value="fem" > 
+                        </div>    
+                        <hr/>
+                       <label for="alt"> <h4>Informe Sua Altura</h4> </label> <br/>
+                       <div class="col-3">
+                            <input type="number" name="alt" id="alt">(Em centimetros)
+                        </div>
+                        <hr/>
+                        <label for="peso"> <h4>Informe Seu Peso</h4> </label> <br/>
+                        <div class="col-3">
+                            <input type="number" name="peso" id="peso">(Em quilos)
+                        </div>    
+                        <hr/>
+                        <label for="peso"> <h4>Informe Sua Idade</h4> </label> <br/>
+                        <div class="col-3">
+                            <input type="number" name="idade" id="idade">
+                        </div>    
+                        <hr/>
+
+                        <input class="btn btn-primary btn-lg" type="submit" value="Calcular" />
+                    </div>
+                
+            </div>    
+			</form>
+					
+							
+
+
+
+
+	
+	
+	
+		
+
+
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	</div>
+	<footer>
+		<hr />
+		<div class="container d-flex justify-content-center">
+			 Copyright &copy; 2020 - by Filipe Andrade	
+		</div>
+		<div class="container d-flex justify-content-center">
+		 	<img src="imagens/face_logo.png" class="img-fluid">	Facebook |
+		 	<img src="imagens/insta_logo.png" class="img-fluid"> Instagram
+		</div> 				
+	</footer>
+</body>
+
+</html>
