@@ -1,0 +1,62 @@
+/*  Importaçoes de fontes */
+
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+/* FORMATAÇÃO DO INDEX */
+    /* Formatação do corpo da pagina */
+    body {
+        background-color: lavender;
+
+    }
+    /* Formatação do cabeçalho */
+    .header{
+        margin-top: 50px;
+    }
+    h2 {
+        font-family: 'Righteous', cursive;
+    
+    }
+    /* Formatação do conteúdo principal */
+
+    h4 {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .section {
+        border: lightslategrey;
+        background-color: rgb(177, 187, 190);
+        box-shadow: 3px 3px 4px rgb(88, 87, 87);
+        padding: 2.5%;
+        width: 70%;
+        margin-top: 50px;
+        
+    }
+    p {
+        margin-left: 50px;
+        font-size: 20px;
+
+    }
+    .regra {
+        margin-left: 50px;
+        font-size: 14px;
+        display: block;
+    }
+
+    /* Definindo desing responsivo */
+    @media only screen and (max-device-width: 320px) {
+    .section {
+            width: 100%;
+            text-align: center;
+        
+    }
+    input {
+        margin-left: 50px;
+    }
+    .regra {
+        margin-left: 50px;
+    }
+        
+    }
+/* FIM FORMTAÇÃO DO INDEX */    
+
