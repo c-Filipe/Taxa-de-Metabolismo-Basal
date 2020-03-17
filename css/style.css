@@ -2,16 +2,22 @@
 
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
 /* FORMATAÇÃO DO INDEX */
     /* Formatação do conteudo do corpo da pagina */
     body {
-        background-color: lavender;
+        background-color: rgb(210, 237, 250);
 
     }
     .form-control {
         width: 160px;
         text-align: center;
+    }
+    .form-control:hover {
+        background-color: rgb(215, 252, 252);
+        color: #000;
+       font-weight: bold;
     }
   select#atvFis {
     width: 260px;
@@ -19,6 +25,10 @@
 
   }
     /* Formatação do cabeçalho */
+    .info{
+        font-size: 18px;
+        font-family: 'Roboto Slab', serif;
+    }
     .header{
         margin-top: 50px;
     }
@@ -30,20 +40,27 @@
 
     h4 {
         font-family: 'Oswald', sans-serif;
+        font-size: 30px;
+        
     }
 
     .section {
         border: lightslategrey;
-        background-color: rgb(177, 187, 190);
+        background-color: rgb(176, 207, 236);
         box-shadow: 3px 3px 4px rgb(88, 87, 87);
         padding: 2.5%;
         width: 70%;
         margin-top: 50px;
         
+        
+    }
+    .form-group{
+        margin-left: 80px;
+
     }
     p {
         margin-left: 50px;
-        font-size: 20px;
+        font-size: 25px;
 
     }
     .regra {
@@ -69,3 +86,27 @@
     }
 /* FIM FORMTAÇÃO DO INDEX */    
 
+/*FORMTAÇÃO DO RESULT */
+
+.sub {  
+    font-size: 25px;
+    font-weight: bold;
+    padding: 15px;
+
+}
+.tmb {
+    margin-left: 62px;
+}
+.result {
+    font-size: 40px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border:solid 1px cornflowerblue;
+   box-shadow: 2px 2px 2px 1px #138496;
+   background-color: rgb(215, 252, 252);
+   border-radius:20px;
+
+}
+
+
+  

@@ -1,3 +1,10 @@
+<?php
+	require_once 'classe_calculadora.php';
+	$tmb = new calculadora;
+	$tmb->calcular();
+			
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,33 +12,52 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/estilo_personalizado.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 
-  <!-- Quebra linha -->
-  <div class="clearfix"></div>
-    <!-- Quebra linha -->
-	<div class="clearfix"></div>
-	
-</div>
 
-	<div class="row d-flex justify-content-center">
-		<div class="col-2">
-			Resultado
-		</div>
+	<div class="container body">
+		<div class="container header">
+			<header>
+
+				<div class="row d-flex justify-content-center">
+					<h2>Resultado do TMB</h2>           
+				</div>
+			</header>     
+		</div> 
 		
-		 <!-- Force as próximas colunas quebrarem, em uma nova linha -->
-		<div class="w-100"></div>
+		<div class="container section">            
+            <section>
+				
+					<?php
+						echo "<div class='row d-flex justify-content-center'>";
+							echo "<span class='sub tmb'> TMB:</span>". "<span class='result'>" .number_format($tmb->getTmb(),2, '.', '')."</span>";
+						echo "</div>";
+						echo "</br>";
+						echo "<div class='row d-flex justify-content-center'>";	
+							echo " <span class='sub'> TMB total:</span>". "<span class='result'>". number_format($tmb->getTmbTotal(),2, '.', '')."</span>";
+						echo "</div>";	
 
- 		<div class="col-2">
-  			<?php
-				require_once 'classe_calculadora.php';
-				$tmb = new calculadora;
-				$tmb->calcular();
-			
-			?>
+					?>
+				</br>	
+				
+			</section>
+			<p>
+				Para <span class='sub'>PERDER </span> peso diminua do seu TMB Total de <span class='result'> 500</span> a <span class='result'> 600 </span> calorias diariamente. 
+			</p>
+			<p>
+				Para <span class='sub'> AUMENTAR </span> seu peso some ao  seu TMB Total de <span class='result'> 500</span> a <span class='result'> 600 </span> calorias diariamente. 
+			</p>
+			<div class='row d-flex justify-content-center'>
+
+				<a href="../index.html"><input class="btn btn-info btn-lg btn-block type="submit" value="Novo cálculo" /> </a>
+
+				</div>	
+			 
 		</div>
+	</br>
+			
   	</div>
 
 

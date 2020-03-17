@@ -78,7 +78,7 @@
                 echo "<script> history.back() </script>";
             }
             elseif (empty($this->getPeso())) {
-                echo "<script>alert(Informe seu peso para a realização do cálculo')</script>";
+                echo "<script>alert('Informe seu peso para a realização do cálculo')</script>";
                 echo "<script> history.back() </script>";
             }
             elseif (empty($this->getIdade())) {
@@ -105,8 +105,7 @@
                         
                     }
                     
-                    echo number_format($this->getTmb(),2, '.', '') . "<br/>";
-                    echo number_format($this->getTmbTotal(),2, '.', '');
+                    
                 }
                 // calculo para o sexo femeneno
                 if ($this->getSexo() == 'fem') {
@@ -126,8 +125,7 @@
                         
                     }
                     
-                    echo $this->getTmb() . "<br/>";
-                    echo $this->getTmbTotal();
+                    
                 }
             }
 
