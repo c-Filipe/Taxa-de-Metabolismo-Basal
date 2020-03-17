@@ -2,12 +2,15 @@
 
     class calculadora {
 
+        
 
         private $sexo;
         private $altura;
         private $peso;
         private $idade;
         private $tmb;
+        private $atvFis;
+        private $tmbTotal;
 
         // Metodos Setters
 
@@ -26,6 +29,14 @@
         public function setTmb($setTmb) {
             $this->tmb = $setTmb;
         }
+        public function setAtvFis($atvFis) {
+            $this->atvFis = $atvFis;
+        }
+        public function setTmbTotal($tmbTotal) {
+            $this->tmbTotal = $tmbTotal;
+        }
+        
+
 
         // Métodos Getters
         public function getSexo() {
@@ -42,7 +53,13 @@
        }
        public function getTmb() {
         return $this->tmb;
-       } 
+       }
+       public function getAtvFis() {
+        return $this->atvFis;
+       }
+       public function getTmbTotal() {
+        return $this->tmbTotal;
+       }  
 
        public function calcular(){
 
@@ -50,7 +67,7 @@
             $this->setAltura(addslashes($_POST['alt']));
             $this->setPeso(addslashes($_POST['peso']));
             $this->setIdade(addslashes($_POST['idade']));
-
+            $this->setAtvFis(addslashes($_POST['atvFis']));
 
 
 
@@ -68,17 +85,49 @@
                 echo "<script>alert('Informe sua idade para a realização do cálculo')</script>";
                 echo "<script> history.back() </script>";
             }
+            
+            // calculo para o sexo masculino
             else{
                 if ($this->getSexo() == 'masc') {
                             
-                    $this->setTmb(66 + (13.7 * $this->getPeso()) + (5.0 * $this->getAltura()) - (6.8 * $this->getIdade()));
-
-                    echo $this->getTmb();
+                    $this->setTmb(66 + (13.7 * $this->getPeso()) + (5 * $this->getAltura()) - (6.8 * $this->getIdade()));
+                    
+                    switch ($this->getAtvFis()) {
+                        case '0':
+                           $this->setTmbTotal($this->getTmb() + $this->getTmb() * 0.25) ;
+                            break;
+                        case '1':
+                            $this->setTmbTotal($this->getTmb() + $this->getTmb() * 0.35) ;
+                            break;
+                            case '2':
+                                $this->setTmbTotal($this->getTmb() + $this->getTmb() * 0.45) ;
+                                break;    
+                        
+                    }
+                    
+                    echo number_format($this->getTmb(),2, '.', '') . "<br/>";
+                    echo number_format($this->getTmbTotal(),2, '.', '');
                 }
+                // calculo para o sexo femeneno
                 if ($this->getSexo() == 'fem') {
 
                     $this->setTmb(665 + (9.6 *  $this->getPeso()) + (1.8 * $this->getAltura()) - (4.7 * $this->getIdade()));
-                    echo $this->getTmb();
+
+                    switch ($this->getAtvFis()) {
+                        case '0':
+                           $this->setTmbTotal($this->getTmb() + $this->getTmb() * 0.20) ;
+                            break;
+                        case '1':
+                            $this->setTmbTotal($this->getTmb() + $this->getTmb() * 0.30) ;
+                            break;
+                            case '2':
+                                $this->setTmbTotal($this->getTmb() + $this->getTmb() * 0.40) ;
+                                break;    
+                        
+                    }
+                    
+                    echo $this->getTmb() . "<br/>";
+                    echo $this->getTmbTotal();
                 }
             }
 

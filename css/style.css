@@ -4,11 +4,20 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
 /* FORMATAÇÃO DO INDEX */
-    /* Formatação do corpo da pagina */
+    /* Formatação do conteudo do corpo da pagina */
     body {
         background-color: lavender;
 
     }
+    .form-control {
+        width: 160px;
+        text-align: center;
+    }
+  select#atvFis {
+    width: 260px;
+    text-align: center;
+
+  }
     /* Formatação do cabeçalho */
     .header{
         margin-top: 50px;

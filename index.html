@@ -32,17 +32,26 @@
                             <hr/>
                         <label for="alt"> <h4>Informe Sua Altura</h4> </label> <br/>
                         <div class="col-3">
-                                <input type="number" name="alt" id="alt"> <span class="regra"> (Em centimetros) </span>
+                                <input type="number" name="alt" id="alt" class="form-control"> <span class="regra"> (Em centimetros) </span>
                         </div>
                             <hr/>
                             <label for="peso"> <h4>Informe Seu Peso</h4> </label> <br/>
                             <div class="col-3">
-                                <input type="number" name="peso" id="peso"> <span class="regra"> (Em quilos) </span>
+                                <input type="number" step="0.01" name="peso" id="peso" class="form-control"> <span class="regra"> (Em quilos) </span>
                             </div>    
                             <hr/>
                             <label for="peso"> <h4>Informe Sua Idade</h4> </label> <br/>
                             <div class="col-3">
-                                <input type="number" name="idade" id="idade">
+                                <input type="number" name="idade" id="idade" class="form-control">
+                            </div>    
+                            <hr/>
+                            <label for="atvfis"> <h4>Informe Sua Rotina de Atividades Físicas</h4> </label> <br/>
+                            <div class="col-3">
+                                 <select id="atvFis" name="atvFis" class="form-control">
+                                     <option value="0"> Nenhuma atividade física</option>
+                                     <option value="1"> Atividade física moderada </option>
+                                     <option value="2"> Atividade física intensa</option>
+                                 </select>
                             </div>    
                             <hr/>
 
