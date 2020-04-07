@@ -18,7 +18,7 @@ Taxa de Metabolismo Basal
 
 <hr/>
 
- <h2>Features</h2> 
+ <h2>Tecnologias Utilizadas</h2> 
  
 
 - ⚛️ **PHP** —  uma linguagem interpretada livre, usada originalmente apenas para o desenvolvimento de aplicações presentes e atuantes no lado do servidor, capazes de gerar conteúdo dinâmico na World Wide Web. <br/>
